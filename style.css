@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
+* { 
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Underdog';
+}
+
+header {
+	height: 100vh;
+	background-image: url(images/618502.jpg) ;
+	background-size: cover;
+	position: relative;
+}
+
+nav {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	margin: 20px 40px;
+	list-style: none;
+	font-size: 20px;
+	position: relative;
+	
+}
+
+nav li a {
+	text-decoration: none;
+	color: #63c0ff;
+	display: block;
+	position: relative;
+	z-index: 2;
+	transition: all .3s linear;
+}
+
+nav li::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 0;
+	background-color: #63c0ff;
+	position: absolute;
+	transition: all .3s linear;
+	top: 0;
+	right: 0;
+	
+}
+
+nav li::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 120%;
+	position: absolute;
+	transition: all .3s linear;
+	top: 50%;
+	right: 50%;
+	border-top: 2px solid #63c0ff;
+	border-bottom: 2px solid #63c0ff;
+	transform: translate(50%,  -50%);
+}
+	
+nav li:hover a {
+	color: black;
+}
+	
+nav li:hover:after {
+	height: 100%;
+}
+
+	nav li:hover:before {
+		width: 100%;
+		
+	}
+		
+.text-back {
+		position: absolute;
+		bottom: 50px;
+		right: 100px;
+		color: #63c0ff;
+		line-height: 1;
+		background-size: cover;
+		font-size: 60px;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: url(images/How-To-Train-Your-Dragon-Header-e1687293096422.png)
+}
+
+.text-front {
+	position: absolute;
+		bottom: 50px;
+		right: 100px;	
+		color: #63c0ff;
+		line-height: 1;
+		font-size: 60px;
+		mix-blend-mode: color;
+}
+
+header span {
+	font-size: 100px;
+}
+
+.container {
+	background-image: url(images/how-to-train-your-dragon-2.jpg);
+	height: 100vh;
+	background-size: cover;
+	display: flex;
+}
+
+.menu {
+	width: 200px;
+	position: relative;
+}
+
+.about {
+	flex-grow: 1;
+	position: relative;
+}
+
+.fab {
+	position: absolute;
+	bottom: 30px;
+	left: 30px;	
+	cursor: pointer;
+}
+
+.fab-button_item{
+	list-style: none;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.fab-action {
+	width:70px;
+	height : 70px;
+	border-radius: 50%;
+	background-color: #00a9f2;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 22px;
+}
+
+.fab-buttons {
+	display: none;
+	list-style: none;
+}
+
+.fab:hover .fab-buttons {
+	display: block;
+}
+
+.charactar {
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	background-color: #fff1e8;
+	top: 50%;
+	left:50%;
+	margin-left: -400px;
+	margin-top: -250px;
+	box-shadow: 3px 3px 7px black;
+}
+
+.charactar img {
+	padding: 30px 15px;
+	margin: 30px;
+	float: left;
+	border-top: 2px solid #29b6f6;
+	border-bottom: 2px solid #29b6f6;
+}
+
+.charactar h2 {
+	margin: 10px;
+	font-size: 40px;
+}
+
+.charactar p {
+	margin: 10px;
+	font-size: 24px;
+}
+
+#Hiccup {
+	transform: rotate(-3deg);
+}
+
+#Hiccup:target {
+	z-index: 1;
+	animation: up .5s linear;
+}
+
+#Astrid {
+	transform: rotate(5deg);
+}
+
+#Astrid:target {
+	z-index: 1;
+	animation: up .5s linear;
+}
+
+#Gruffnut {
+	transform: rotate(-10deg);
+}
+
+#Gruffnut:target {
+	z-index: 1;
+	animation: up .5s linear;
+}
+
+#Spitelout {
+	transform: rotate(8deg);
+}
+
+#Spitelout:target {
+	z-index: 1;
+	animation: up .5s linear;
+}
+
+@keyframes up {
+	0% { left: 50%; }
+	50% { left: 45%; }
+	100% { left:50%; }
+}
+
+.tooltip {
+	position: absolute;
+	left: 30px;
+	bottom: 130px;
+	background: white;
+	color: black;
+	padding: 30px;
+	border-radius: 10px;
+	font-size: 24px;
+	animation: jump .5s linear infinite alternate;
+}
+
+.tooltip::after {
+	content: "";
+	dispay: block;
+	width: 40px;
+	height: 25px;
+	background-color: white;
+	position: absolute;
+	left: 10px;
+	bottom: -7px;
+	transform: skewY(-60deg) skewX(15deg) rotate(100deg);
+}
+
+@keyframes jump {
+	0% { transform: translateY(-15px); }
+	100% { transform: translateY(15px); }
+}
+
+.fab:hover .tooltip {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.about-film {
+	background-image: url(images/How-To-Train-Your-Dragon-Header-e1687293096422.png);
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	
+}
+
+.about-film label img{
+	height: 100%;
+}
+
+.about-film input{
+	display: none;
+}
+
+.about-film label {
+	display: block;
+	box-shadow: 2px 0 8px 2px black, -2px 0 5px 1px white;
+	cursor: pointer;
+}
+
+.content-1,
+.content-2,
+.content-3,
+.content-4,
+.content-5 {
+	width: 0;
+	overflow: hidden;
+	background-color: rgba(209, 238, 255, 0.8);
+	transition: all 0.5s ease-in-out;
+}
+
+
+#data1:checked ~ .content-1,
+#data2:checked ~ .content-2,
+#data3:checked ~ .content-3,
+#data4:checked ~ .content-4,
+#data5:checked ~ .content-5 {
+	width: 100%;
+}
+
+.content-1 img,
+.content-3 img,
+.content-5 img {
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+.content-2 img,
+.content-4 img{
+	float: right;
+}
+
+
+content img {
+	padding: 30px;
+}
+
+.content p {
+	padding: 30px;
+	font-size: 24px;
+}
+
+#data1:checked ~ .label-1,
+#data2:checked ~ .label-2,
+#data3:checked ~ .label-3,
+#data4:checked ~ .label-4,
+#data5:checked ~ .label-5 {
+	cursor: default;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.abaut_characters{
+	height: 670px;
+	background-image: url(images/how-to-train-your-dragon-2.jpg);
+	display: flex;
+	
+}
+
+.characters_menu{
+	width: 200px;
+	
+	position:relative;
+}
+
+.characters_conteiner{
+	
+	flex-grow: 1;
+	position: relative;
+}
+
+.fab {
+	cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+	left: 30px;
+}
+
+.tooltip{
+	color: #29B6F6;
+	font-size: 16pt;
+	padding: 20px 45px;
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+	left: 30px;
+	bottom: 130px;
+	animation: tooltip_jump 1s linear infinite alternate
+	
+	
+}
+
+.tooltip:after{
+	content: "";
+	display: block;
+	width: 40px;
+	height: 25px;
+	transform: skewY(-60deg) skewX(15deg) rotate(100deg);
+	background-color: white;
+	position: absolute;
+	left: 10px;
+	bottom: -7px;
+	
+}
+
+.fab:hover .tooltip{
+	display: none;
+}
+
+@keyframes tooltip_jump{
+	0%{transform: translateY(-30px);}
+	
+	100%{transform: translateY(20px);}
+}
+
+.fab-action-button{
+	width: 70px;
+	height: 70px;
+	background-color: #29B6F6;
+    border-radius: 50%;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	font-size: 16pt;
+	padding-top: 20px;
+	position: relative;
+}
+
+.fab-action-button:before{
+	content: "";
+	display: box;
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 3px #00A9F2, 0px 0px 8px 2px #A8D8ED;
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	transform: scale(0);
+	opacity: 0;
+	transition: all .5s linear;
+}
+
+.fab:hover .fab-action-button{
+	color: white;
+}
+
+.fab:hover .fab-action-button:before{
+	transform: scale(1);
+	opacity: 1;
+}
+
+
+.fab-buttons__item{
+	width: 74px;
+	height: 74px;
+	margin-bottom: 10px;
+	background-color: #29B6F6;
+    border-radius: 50%;
+	border: 2px solid black;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	list-style: none;
+	position: relative;
+	
+}
+
+.fab-buttons{
+	display: none;
+	margin-bottom: 50px;
+}
+
+.fab:hover .fab-buttons{
+	display: block;
+}
+
+.fab:hover .fab-buttons__item{
+	animation: label_up 0.5s linear;
+	
+	
+}
+
+@keyframes label_up{
+	0%{transform: scaleY(0.5) scaleX(0) translateY(40px);}
+	50%{transform: scaleY(1) scaleX(0.5) translateY(40px);}
+	100%{transform: scaleY(1) scaleX(1) translateY(0px);}
+}
+
+.fab-buttons__item:before{
+	content: "";
+	display: block;
+	width: 100px;
+	height: 30px;
+	padding: 0 10px;
+	background-color: black;
+	color: white;
+	position: absolute;
+	right: -130px;
+	bottom: 50%;
+	margin-bottom: -15px;
+	opacity:0;
+	transform-origin: left center 0;
+	transform: scale(0);
+	transition: all .5s linear;
+	
+}
+
+.fab-buttons__item:nth-of-type(1):before{
+	content: "Іккінг";
+}	
+
+.fab-buttons__item:nth-of-type(2):before{
+	content: "Астрід";
+}
+
+.fab-buttons__item:nth-of-type(3):before{
+	content: "Забіяка";
+}
+
+.fab-buttons__item:nth-of-type(4):before{
+	content: "Вредіна";
+}
+
+.fab-buttons__item:hover{
+	box-shadow: 0px 0px 6px 2px black;
+}
+
+.fab-buttons__item:hover:before{
+	opacity:1;
+	transform: scale(1);
+              
+}
+
+.character{
+	width: 800px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -400px;
+	background-color: #FFF1E8;
+	z-index:0;
+	box-shadow: 3px 3px 7px black;
+	
+}
+
+.character img{
+	padding: 30px 15px;
+	margin: 30px;
+	border-bottom: 2px solid #29B6F6;
+	border-top: 2px solid #29B6F6;
+	float: left;
+	
+}
+
+.character h2{
+	margin: 10px;
+}
+
+.character p{
+	margin: 10px;
+}
+
+#Hiccup{
+	transform: rotate(-3deg);
+}
+#Hiccup:target{
+	animation: character_up 0.5s linear;
+	transform: rotate(0deg);
+	z-index:1;
+}
+
+#Astrid{
+	transform: rotate(5deg);
+}
+#Astrid:target{
+	animation: character_up 0.5s linear;
+	transform: rotate(0deg);
+	z-index:1;
+}
+#Gruffnut{
+	transform: rotate(-11deg);
+}
+#Gruffnut:target{
+	animation: character_up 0.5s linear;
+	transform: rotate(0deg);
+	z-index:1;
+}
+#Spitelout{
+	transform: rotate(8deg);
+}
+#Spitelout:target{
+	animation: character_up 0.5s linear;
+	
+	transform: rotate(0deg);
+	z-index:1;
+}
+
+@keyframes character_up {
+	0%{
+		
+		left: 50%;
+		
+	}
+	50%{
+		
+		left: 45%;
+	}
+	100%{
+		
+		
+		left: 50%;
+		
+	}
+	
+}
+
+.about_dragons{
+	min-height: 670px;
+	background-image: url(images/19200626.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 30px;
+}
+
+.accordion {
+    border: 2px solid #6B537C;
+    width: 800px;
+	margin: 0px auto;
+	background-image: linear-gradient(to bottom right, #EAFC83 0%, #9FC6F5 60%, #3366FF 85%, #1F3E9C 100%);
+}
+
+.accordion ul{
+	list-style: none;
+}
+
+.accordion ul li{
+	position: relative;
+}
+
+.accordion_header{
+	height: 80px;
+    padding: 10px 25px;
+	cursor: pointer;
+	background: #6B537C;
+    border-top: 1px solid #9775AF;
+    border-bottom: 1px solid #4F3D5B;
+	display: flex;
+	align-items: center;
+}
+
+.accordion_header h2 {
+    font-size: 30px;
+	color: #f4f4f4;
+	padding-left: 20px;
+	
+    
+}
+
+.accordion_header img{
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	border:  2px solid #DB6E5E;
+	
+}
+
+.msg {
+	max-height: 0;
+	opacity: 0;
+	transform: translate(0, 50%);
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.accordion ul li input:checked ~ div.msg {
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.msg p {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.msg img{
+	float: right;
+	padding: 10px 20px;
+}
+
+.accordion ul li input{
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 80px;
+  opacity: 0;
+}
+
+.accordion ul li span {
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	display: block;
+	width: 9px;
+	height: 9px;
+}
+ 
+
+.accordion ul li span:before, .accordion ul li span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #eee;
+  width: 3px;
+  height: 9px;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordion ul li span:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion ul li span:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.accordion ul li input:checked ~ span:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion ul li input:checked ~ span:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
